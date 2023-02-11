@@ -99,7 +99,7 @@ const inputOperator = (operatorKey) => {
   } else if (secondNumber == null) {
     secondNumber = Number(displayValue);
     operate(firstNumber, secondNumber, operator);
-    displayValue = result.toFixed(12);
+    displayValue = result;
     operator = operatorKey;
     firstNumber = result;
     secondNumber = null;
@@ -113,7 +113,7 @@ const inputEquals = () => {
   if (firstNumber != null) {
     secondNumber = Number(displayValue);
     operate(firstNumber, secondNumber, operator);
-    displayValue = result.toFixed(12);
+    displayValue = result;
     operator = null;
     firstNumber = result;
     secondNumber = null;
