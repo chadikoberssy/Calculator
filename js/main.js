@@ -99,7 +99,7 @@ const inputOperator = (operatorKey) => {
   } else if (secondNumber == null) {
     secondNumber = Number(displayValue);
     operate(firstNumber, secondNumber, operator);
-    displayValue = result;
+    displayValue = Math.round((result) * 1000000) / 1000000;
     operator = operatorKey;
     firstNumber = result;
     secondNumber = null;
@@ -113,7 +113,7 @@ const inputEquals = () => {
   if (firstNumber != null) {
     secondNumber = Number(displayValue);
     operate(firstNumber, secondNumber, operator);
-    displayValue = result;
+    displayValue = Math.round((result) * 1000000) / 1000000;
     operator = null;
     firstNumber = result;
     secondNumber = null;
